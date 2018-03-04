@@ -1,1 +1,22 @@
-theme: jekyll-theme-slate
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            El Conflicto de Avianca
+tagline:          'Un análisis de conflicto entre Avianca y sus pilotos'
+description:      'Rellenar por favor'
+url:              https://conflictoavianca.tk
+baseurl:          /
+
+author:
+  name:           'Samantha Arias'
+  url:            https://twitter.com/SamanthaArias
+
+paginate:         5
+
+version:          2.1.0
+
