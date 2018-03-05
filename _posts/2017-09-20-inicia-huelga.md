@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Inicia la huelga de pilotos
-image: /public/paro_trabajadores.jpg
+image: /public/usuarios.jpg
 timeline-date: Septiembre 20 de 2017
 ---
 
