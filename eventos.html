@@ -13,7 +13,7 @@ title: Eventos
 			{% endcapture %}
 				<li class="{{ class }}">
 					<div class="timeline-image">
-						<div class="circular" style = "background-image: url({% if post.image %}{{ post.image }}{% else %}{{site.career-img}}{% endif %});">
+						<div class="circular" onclick="document.getElementById('photo-modal').style.display = 'block';document.getElementById('modal-img').src = '{% if post.image %}{{ post.image }}{% else %}{{site.career-img}}{% endif %}';document.getElementById('caption').innerHTML = '{{ post.title }}';" style = "background-image: url({% if post.image %}{{ post.image }}{% else %}{{site.career-img}}{% endif %});">
 							<img src="{% if post.image %}{{ post.image }}{% else %}{{site.career-img}}{% endif %}" alt="">
 						</div>
 					</div>
@@ -21,7 +21,6 @@ title: Eventos
 						<div class="timeline-heading">
 							<h4>{{post.timeline-date}}:</h4>
 							<h5 class="subheading">{{ post.title }}</h5>
-							<h5 class="subheading">{{ post.subtitle }}</h5>
 						</div>
 						<div class="timeline-body">
 							<p class="text-muted">{{ post.content }}</p>
@@ -37,3 +36,9 @@ title: Eventos
 					</div>
 				</li>
 			</ul>
+			
+			<div id="photo-modal" class="modal">
+			  <span class="close" onclick="document.getElementById('photo-modal').style.display = 'none';">×</span>
+			  <img class="modal-content" id="modal-img">
+			  <div id="caption"></div>
+			</div>
